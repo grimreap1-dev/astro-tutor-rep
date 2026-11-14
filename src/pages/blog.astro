@@ -1,5 +1,8 @@
 ---
-import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import "../styles/global.css";
+
 const pageTitle = "Мой блог";
 ---
 
@@ -13,9 +16,7 @@ const pageTitle = "Мой блог";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Главная</a>
-		<a href="/about/">О сайте</a>
-        <a href="/blog/">Блог</a>
+		<Header />
 			
 		    <h1>{pageTitle}</h1>
             <p>Здесь я буду публиковать записи о своем пути изучения Astro.</p>
@@ -25,5 +26,9 @@ const pageTitle = "Мой блог";
 				<li><a href="/posts/post-2/">Пost 2</a></li>
       			<li><a href="/posts/post-3/">Пost 3</a></li>
     		</ul>
+		<Footer />
+		<script>
+    		import "../scripts/menu.js";
+  		</script>
 	</body>
 </html>
